@@ -1,0 +1,160 @@
+/* ===== Body ===== */
+body {
+    font-family: "Arial", sans-serif;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    align-items: center;
+}
+
+/* ===== Links ===== */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+/* ===== Profile Section ===== */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(8, 0, 8, 0.15);
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.profileImg-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--input-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--icon-color);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.profileViewMode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profileViewMode .profileName {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.profileViewMode a {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* ===== Settings Sections ===== */
+.generalSettings, .securitySettings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(8,0,8,0.12);
+    padding: 10px 0;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* ===== Individual Settings ===== */
+.profileSetting a,
+.themeSetting a,
+.clubSettings a,
+.passwordSetting a,
+.customerSupport a {
+    display: flex;           /* keep flex layout */
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 100%;             /* full width clickable */
+    box-sizing: border-box;
+    color: inherit;          /* keep text color from variables */
+    text-decoration: none;   /* remove underline */
+}
+
+.profileSetting a:hover,
+.themeSetting a:hover,
+.clubSettings a:hover,
+.passwordSetting a:hover,
+.customerSupport a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+.icon i {
+    font-size: 22px;
+    color: var(--icon-color);
+}
+
+.settingTxt p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ===== Logout Button ===== */
+.logoutBtn {
+    background-color: var(--save-btn-bg);
+    color: var(--save-btn-text);
+    border: none;
+    border-radius: 16px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 450px;
+}
+
+.logoutBtn:hover {
+    background-color: var(--save-btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 500px) {
+    .profile, .generalSettings, .securitySettings, .logoutBtn {
+        width: 100%;
+        padding: 10px 12px;
+    }
+
+    .profileImg-container {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .profileViewMode .profileName {
+        font-size: 14px;
+    }
+
+    .settingTxt p {
+        font-size: 14px;
+    }
+}

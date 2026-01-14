@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/themeRoot.css">
+    <link rel="stylesheet" href="../Styles/editProfile.css">
+
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="profileImage">
+            <div class="profileImg-container"><i class="fi fi-rr-user"></i>
+                <i class="fi fi-rr-pencil"></i>
+            </div>
+            
+        </div>
+        <input type="file" id="profile-upload" accept="image/*" style="display:none">
+        <div class="name-fill-box">
+            <div class="labels"><label for="name-field">Name</label></div>
+            <div class="input-box"><input type="text" id="name-field" placeholder="Ko Tin Maung"></div>
+        </div>
+        <div class="bio-fill-box">
+            <div class="labels"><label for="bio-txt-field">Bio</label></div>
+            <div class="input-box"><textarea id="bio-txt-field" maxlength="500" rows="5" placeholder="Eww# brother what's that"></textarea></div>
+        </div>
+        <div class="gmail-fill-box">
+            <div class="labels"><label for="gmail-field">Gmail</label></div>
+            <div class="input-box"><input type="email" id="gmail-field" placeholder="Optional"></div>
+        </div>
+        <div class="phoneNo-fill-box">
+            <div class="labels"><label for="phoneNo-field">Phone Number</label></div>
+            <div class="input-box"><input type="tel" id="phoneNo-field" maxlength="11" placeholder="Optional"></div>
+        </div>
+        <div class="saveButton"><button>Save</button></div>
+    </div>
+
+     <script src="../JS/editProfile.js"></script>
+     <script src="../JS/theme.js"></script>
+
+</body>
+</html>

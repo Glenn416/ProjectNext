@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/themeRoot.css">
+<link rel="stylesheet" href="../Styles/settings.css">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Settings</title>
+</head>
+<body>
+    <div class="profile">
+        <div class="profileImg-container"><i class="fi fi-rr-user"></i></div>
+        <div class="profileViewMode">  
+            <div class="profileName">Name</div>
+            <div><a href="profileView.html">View profile</a></div>
+        </div>
+    </div>
+    <div class="generalSettings">
+        <div class="profileSetting">
+            <a href="editProfile.html">
+                <div class="icon"><i class="fi fi-rr-pencil"></i></div>
+                <div class="settingTxt"><p>Edit Profile</p></div>
+            </a>
+        </div>
+        <div class="themeSetting">
+            <a href="">
+            <div class="icon"><i class="fi fi-rr-dark-mode-alt"></i></div>
+            <div class="settingTxt"><p id="theme-text">Change Theme</p></div>
+            </a>
+        </div>
+
+        <div class="clubSettings">
+            <a href="">
+            <div class="icon"><i class="fi fi-rr-users-alt"></i></div>
+            <div class="settingTxt"><p>Manage Clubs</p></div>
+            </a>
+        </div>
+    </div>
+    <div class="securitySettings">
+        <div class="passwordSetting">
+            <a href="">
+            <div class="icon"><i class="fi fi-rr-password-lock"></i></div>
+            <div class="settingTxt"><p>Change Password</p></div>
+            </a>
+        </div>
+        <div class="customerSupport">
+            <a href="">
+            <div class="icon"><i class="fi fi-rr-user-headset"></i></div>
+            <div class="settingTxt"><p>Connect Us</p></div>
+            </a>
+        </div>
+    </div>
+    <button class="logoutBtn" style="width: 100px;padding: 5px;"><i class="fi fi-rr-user-logout"></i> Logout</button>
+<script src="../JS/theme.js"></script>
+<script src="../JS/profileView.js"></script>
+</body>
+</html>

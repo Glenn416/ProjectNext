@@ -1,0 +1,169 @@
+/* ===== Body ===== */
+body {
+    font-family: "Arial", sans-serif;
+    padding: 20px;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+    font-size: 24px;          
+    border: none;              
+    background: none;          
+    color: var(--icon-color);  
+    cursor: pointer;
+    position: absolute;        
+    top: 10px;
+    left: 10px;
+    padding: 0;                
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.back-btn:active {
+    transform: scale(0.9);     
+}
+
+/* ===== Container ===== */
+.profile-container {
+    position: relative;  
+    display: grid;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 5px 10px rgba(8, 0, 8, 0.15);
+    gap: 20px;
+}
+
+/* ===== Profile Header ===== */
+.profile-header {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ===== Profile Image ===== */
+.profileImg-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--input-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.profileImg-container:hover {
+    transform: scale(1.05);
+}
+
+.fi.fi-rr-user {
+    font-size: 100px;
+    color: var(--icon-color);
+}
+
+/* ===== Profile Info ===== */
+.profileInfo {
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    grid-template-rows: 2em 1em 2em;
+    gap: 5px;
+}
+
+.profileInfo h2 {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px
+}
+
+.profileInfo h6 {
+    color: var(--text-color);
+    padding: 10px;
+}
+
+/* ===== Clubs ===== */
+.clubs a {
+    margin-left: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    padding: 6px 10px;
+    font-size: 12px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    margin-right: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    transition: background-color 0.2s;
+}
+
+.clubs a:hover {
+    background-color: #92fbff;
+    color: rgb(53, 53, 53);
+}
+
+/* ===== Bio ===== */
+.bio {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* ===== Contact Info ===== */
+.contact-info h5 {
+    margin-bottom: 5px;
+}
+
+.contact-info a, .contact-info p {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 500px) {
+    .profile-header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    .profileInfo {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .clubs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    button {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}

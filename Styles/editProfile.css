@@ -1,0 +1,139 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 2px 5px 10px rgba(8, 0, 8, 0.1);
+    gap: 20px;
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 0.8s ease-out;
+    margin: 10px;
+}
+
+.profileImg-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--input-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.profileImg-container .fi-rr-user {
+    font-size: 100px;
+    color: var(--icon-color);
+}
+
+.profileImg-container .fi-rr-pencil {
+    position: absolute;
+    bottom: -5px;
+    right: -5px; 
+    background-color: var(--pencil-bg);
+    color: var(--pencil-color);
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+    animation: float-pencil 2s infinite ease-in-out;
+}
+
+.profileImg-container .fi-rr-pencil:active {
+    transform: scale(0.95);
+    background-color: var(--pencil-active);
+}
+
+.name-fill-box, .bio-fill-box, .gmail-fill-box, .phoneNo-fill-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: start;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 12px;
+    padding: 8px 12px;
+    box-shadow: inset 2px 3px 3px rgba(8, 0, 8, 0.074),
+                inset -2px -3px 3px rgba(255, 255, 255, 0.09);
+    font-size: 16px;
+    width: 100%;
+    transition: box-shadow 0.3s;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: inset 2px 3px 5px rgba(8, 0, 8, 0.12),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.15);
+}
+
+.labels label {
+    font-weight: bold;
+    color: var(--text-color);
+    align-self: center;
+}
+
+.saveButton button {
+    background-color: var(--save-btn-bg);
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--save-btn-text);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.saveButton button:hover {
+    background-color: var(--save-btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(7, 116, 218, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes float-pencil {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+        gap: 15px;
+    }
+    .name-fill-box, .bio-fill-box, .gmail-fill-box, .phoneNo-fill-box {
+        grid-template-columns: 1fr;
+    }
+}
