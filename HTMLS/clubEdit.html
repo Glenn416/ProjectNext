@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Club</title>
+
+<link rel="stylesheet" href="../Styles/themeRoot.css">
+<link rel="stylesheet" href="../Styles/clubEdit.css">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+</head>
+
+<body>
+<div class="edit-container">
+
+    <!-- Banner edit -->
+    <div class="banner-edit">
+    <div class="image-container">
+        <img id="bannerPreview" src="../Assets/Images/example-banner.jpg">
+        <i class="fi fi-rr-pencil edit-icon" onclick="document.getElementById('bannerInput').click()"></i>
+    </div>
+    <input type="file" id="bannerInput" accept="image/*">
+</div>
+
+    <!-- Profile edit -->
+    <div class="profile-edit">
+    <img id="clubPreview" src="../Assets/Images/example-profile.jpg">
+    <i class="fi fi-rr-pencil edit-icon" onclick="document.getElementById('clubImage').click()"></i>
+    <input type="file" id="clubImage" accept="image/*">
+</div>
+
+
+    <input type="text" id="clubName" placeholder="Club name">
+
+    <textarea id="clubIntro" placeholder="Club introduction"></textarea>
+
+    <textarea id="clubRules" placeholder="Club rules"></textarea>
+
+    <button onclick="saveClub()">Save</button>
+
+</div>
+
+<script src="../JS/clubEdit.js"></script>
+</body>
+</html>

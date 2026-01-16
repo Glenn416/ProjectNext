@@ -1,0 +1,153 @@
+/* ===== Base styles ===== */
+body {
+    margin: 0;
+    background: var(--bg-color);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.edit-container {
+    max-width: 420px;
+    margin: 30px auto;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Banner edit ===== */
+.banner-edit {
+    width: 100%;
+}
+
+.banner-edit .image-container {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.banner-edit .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Banner edit icon inside image (circle) */
+.banner-edit .edit-icon {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.banner-edit .edit-icon:hover {
+    background: rgba(0,0,0,0.8);
+    transform: scale(1.2);
+}
+
+/* ===== Profile edit ===== */
+.profile-edit {
+    position: relative; /* parent for absolute icon */
+    width: 90px;
+    margin-top: -45px;
+    margin-left: 12px;
+}
+
+.profile-edit img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--card-bg);
+}
+
+/* Profile edit icon at bottom-right (circle) */
+.profile-edit .edit-icon {
+    position: absolute;
+    bottom: -6px;  /* slightly outside bottom */
+    right: -6px;   /* slightly outside right */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.profile-edit .edit-icon:hover {
+    background: rgba(0,0,0,0.8);
+    transform: scale(1.2);
+}
+
+/* ===== Hide file inputs ===== */
+input[type="file"] {
+    display: none;
+}
+
+/* ===== Text Inputs ===== */
+input[type="text"], textarea {
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* ===== Save button ===== */
+button {
+    background: var(--icon-color);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 480px) {
+    .edit-container {
+        margin: 20px 12px;
+        padding: 16px;
+    }
+
+    .profile-edit {
+        margin-left: 8px;
+    }
+}
