@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Post</title>
+
+<link rel="stylesheet" href="../Styles/uploadPage.css">
+<link rel="stylesheet" href="../Styles/themeRoot.css">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+</head>
+
+<body>
+<div class="post-page">
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <i class="fi fi-rr-arrow-left back-btn" onclick="history.back()"></i>
+    <button class="post-btn">Post</button>
+  </div>
+
+  <!-- Text input -->
+  <div class="input-row">
+        <div class="avatar-wrapper">
+            <!-- Default avatar (icon) -->
+            <i id="avatarIcon" class="fi fi-rr-user avatar-icon"></i>
+
+            <!-- Real profile photo (hidden by default) -->
+         <img id="userAvatar" class="avatar" hidden>
+        </div>
+
+
+        <textarea
+            id="postText"
+            class="post-text"
+            placeholder="What's new???"></textarea>
+        </div>
+
+  <!-- Media preview (hidden by default) -->
+        <!-- Media preview -->
+        <div class="media-box" id="mediaBox" hidden>
+            <img id="mediaPreview">
+            <button class="remove-btn" id="removeBtn" onclick="removeMedia()">×</button>
+        </div>
+
+
+        <!-- Upload button -->
+        <div class="upload-btn" id="uploadBtn">
+            <i class="fi fi-rr-upload"></i>
+        </div>
+
+        <input type="file" id="uploadInput" accept="image/*,video/*" hidden>
+
+</div>
+
+<script src="../JS/uploadPage.js"></script>
+</body>
+</html>
