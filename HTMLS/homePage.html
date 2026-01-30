@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students' Corner</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="../Styles/homePage.css">
+<link rel="stylesheet" href="../Styles/themeRoot.css">
+</head>
+<body>
+
+<div class="app-container">
+
+<header class="top-bar">
+    <div class="logo-area">
+        <img src="../Assets/Images/uni_logo.jpeg" width="35" height="40">
+        <span class="app-name">Students' Corner</span>
+    </div>
+    <div class="profile-btn">
+    <i class="fa-solid fa-user-circle" id="openSettings"></i>
+    </div>
+</header>
+
+<main class="feed">
+    <!-- Your posts stay unchanged -->
+                    <article class="post">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&h=100" class="profile-pic">
+                    <span class="username">University Announcement</span>
+                </div>
+                
+                <div class="text-slider">
+                    Technological University, Meiktila is located on the right side of Meiktila-Pindale Road in Meiktila, Mandalay Region. Its area is 51.65 acres.
+The University was transferred to the present site in 2008. The former University was in Tawma Village-tract east of Meiktila. It was originally formed on 1 December 1986 as Government Technical Institute (Meiktila) in Tawma Village near Meiktila. It became Government Technological College on 25 November 1999. The University was inaugurated on 20 January 2007 at that place.
+                </div>
+
+                <div class="post-actions">
+                    <i class="fa-regular fa-heart like-btn"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                <div class="caption">
+                    <strong>uni_announce</strong>
+                </div>
+            </article>
+                <article class="post">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&h=100" class="profile-pic">
+                    <span class="username">Class Announcement</span>
+                </div>
+                
+                <div class="image-slider">
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=600&h=600"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&h=600"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&h=600"></div>
+                </div>
+
+                <div class="post-actions">
+                    <i class="fa-regular fa-heart like-btn"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                <div class="caption">
+                    <strong>class_announce</strong> Amazing trip to the mountains! Swipe to see more. 🏔️
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100" class="profile-pic">
+                    <span class="username">Club Announcement</span>
+                </div>
+                
+                <div class="image-slider">
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&h=600"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&h=600"></div>
+                </div>
+
+                <div class="post-actions">
+                    <i class="fa-regular fa-heart like-btn"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                <div class="caption">
+                    <strong>club_announce</strong> My latest artwork project. 🎨
+                </div>
+            </article>
+</main>
+
+<nav class="bottom-nav">
+    <button class="nav-btn active"><i class="fa-solid fa-house"></i></button>
+    <button class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <button class="nav-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+</nav>
+
+</div>
+
+<!-- Side navbar container -->
+<div id="sideNav" class="side-nav">
+    <span class="closeBtn" id="closeNav">&times;</span>
+
+    <!-- Load full HTML page inside iframe -->
+    <iframe id="navFrame" src="settings.html" frameborder="0"></iframe>
+</div>
+
+
+<div class="overlay" id="overlay"></div>
+<script src="../JS/homePage.js"></script>
+</body>
+</html>

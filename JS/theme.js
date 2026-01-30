@@ -1,27 +1,28 @@
-// Get body and theme button
 const themeBtn = document.querySelector('.themeSetting');
 const themeText = document.getElementById('theme-text');
 
-// ===== Load saved theme =====
 if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-    if(themeText) themeText.textContent = "Change Theme";
+    // apply dark mode to parent and iframe
+    parent.document.body.classList.add('dark');
+    document.body.classList.add('dark'); // this is the iframe itself
+
+    if(themeText) themeText.textContent = "Light Theme";
     if(themeBtn) themeBtn.querySelector('i').className = "fi fi-rr-sun";
 }
 
-// ===== Toggle theme =====
 if(themeBtn){
     themeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        if(document.body.classList.contains('dark')){
-            localStorage.setItem('theme', 'dark');
-            if(themeText) themeText.textContent = "Light Theme";
-            themeBtn.querySelector('i').className = "fi fi-rr-sun";
-        } else {
-            localStorage.setItem('theme', 'light');
-            if(themeText) themeText.textContent = "Dark Theme";
-            themeBtn.querySelector('i').className = "fi fi-rr-dark-mode-alt";
-        }
+        // toggle main page
+        const isDarkParent = parent.document.body.classList.toggle('dark');
+        // toggle sidebar itself (iframe content)
+        const isDarkSelf = document.body.classList.toggle('dark');
+
+        // save theme
+        localStorage.setItem('theme', isDarkParent ? 'dark' : 'light');
+
+        // update toggle text & icon
+        if(themeText) themeText.textContent = isDarkParent ? "Light Theme" : "Dark Theme";
+        themeBtn.querySelector('i').className = isDarkParent ? "fi fi-rr-sun" : "fi fi-rr-dark-mode-alt";
     });
 }
 

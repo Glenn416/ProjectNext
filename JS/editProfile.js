@@ -53,12 +53,13 @@ saveBtn.addEventListener('click', () => {
     profileData.phone = phoneField.value;
 
     localStorage.setItem('profileData', JSON.stringify(profileData));
+    localStorage.setItem('openSidebarAfterLoad', 'true');
 
     // Optional feedback
     alert("Profile saved successfully!");
 
     // Redirect to settings page
-    window.location.href = "settings.html";  // <- change if your path is different
+    window.location.href = "homePage.html";  // <- change if your path is different
 });
 
 
