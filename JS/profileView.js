@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Profile View Page
         const profileImgContainer = document.querySelector('.profileImg-container');
-        const displayNameEl = document.querySelector('.profileInfo .displayName');
+        const name = document.querySelector('.profileInfo .name');
         const bioEl = document.querySelector('.bio');
         const gmailEl = document.querySelector('.contact-info a');
         const phoneEl = document.querySelector('.contact-info p');
@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
             profileImgContainer.innerHTML = `<img src="${data.photo}" alt="Profile" style="width:100%;height:100%;border-radius:50%;">`;
         }
 
-        if(displayNameEl) displayNameEl.textContent = data.displayName || 'Display Name';
+        if(name) name.textContent = data.name || '';
         if(bioEl) bioEl.textContent = data.bio || '';
         if(gmailEl) gmailEl.textContent = data.gmail || '';
         if(phoneEl) phoneEl.textContent = data.phone || '';
